@@ -41,11 +41,11 @@ std::cout << "Carga de los archivos cyclists.csv y directors.csv: " << std::endl
 
     //Recorro cyclist.csv con un bucle for
 
-    for(size_t i = 0; i < (vec_cyclist.size() - 1); i++){
+    for(size_t i = 0; i < vec_cyclist.size(); i++){
 
         std::cout << "Ciclista " << i+1 << ". "
-                  << vec_cyclist[i].GetName() << ", nacido el " << vec_cyclist[i].GetBirthYear() << ", es miembro de "
-                  << vec_cyclist[i].GetTeam() << " y su id de ciclista es " << vec_cyclist[i].GetCyclistId() << std::endl;
+                  << vec_cyclist[i].GetName() << ", nacido el " << vec_cyclist[i].GetBirth_Year() << ", es miembro de "
+                  << vec_cyclist[i].GetTeam() << " y su id de ciclista es " << vec_cyclist[i].GetCyclist_Id() << std::endl;
         
     }
 
@@ -56,9 +56,9 @@ std::cout << "Carga de los archivos cyclists.csv y directors.csv: " << std::endl
 
     for(auto &f: vec_directors){
 
-        std::cout << "Director llamado " << f.GetName() << ", nacido el " << f.GetBirthYear() 
-        << ", con direccion en " << f.GetTeam() << ", su id de licencia UCI es " << f.GetUciLicenseId() 
-        << " y lleva siendo director desde " << f.GetDirectorSince() << std::endl;
+        std::cout << "Director llamado " << f.GetName() << ", nacido el " << f.GetBirth_Year() 
+        << ", con direccion en " << f.GetTeam() << ", su id de licencia UCI es " << f.GetUci_License_Id() 
+        << " y lleva siendo director desde " << f.GetDirector_Since() << std::endl;
            
     }
 
@@ -83,7 +83,7 @@ if(team_members.empty()){
 } else{ 
         std::cout << "Ciclistas del equipo" << team_name << ": " << std::endl;
         for(const auto& c : team_members){
-            std::cout << "- " << c.GetName() << ", ID: " << c.GetCyclistId() << ", nacido el " << c.GetBirthYear() << std::endl;
+            std::cout << "- " << c.GetName() << ", ID: " << c.GetCyclist_Id() << ", nacido el " << c.GetBirth_Year() << std::endl;
         }
 }
 
@@ -95,9 +95,9 @@ if(youngests_cyclists.empty()){
     std::cout << "El catalogo de ciclistas esta vacio"<< std::endl;
 
 } else{ 
-        std::cout << "El(Los) ciclista(s) de menor edad nacido(s) en"<< youngests_cyclists[0].GetBirthYear() <<"es(son): " << std::endl;
+        std::cout << "El(Los) ciclista(s) de menor edad nacido(s) en"<< youngests_cyclists[0].GetBirth_Year() <<"es(son): " << std::endl;
         for(const auto& c : youngests_cyclists){
-            std::cout << "- " << c.GetName() << ", componente de "<< c.GetTeam() << "y con ID: " << c.GetCyclistId() << std::endl;
+            std::cout << "- " << c.GetName() << ", componente de "<< c.GetTeam() << "y con ID: " << c.GetCyclist_Id() << std::endl;
         }
 }
 

@@ -89,7 +89,7 @@ bool DirectorCatalog::Load(const std::string& path){
 std::string CyclistCatalog::GetTeam(std::string cyclist_id){
 
     for(const auto& c : cyclists_){
-        if (c.GetCyclistId() == cyclist_id){
+        if (c.GetCyclist_Id() == cyclist_id){
             return c.GetTeam();
         }
     }
@@ -122,14 +122,14 @@ std::vector <Cyclist> CyclistCatalog::GetYoungest(){
 
     //El año de nacimiento más alto corresponde al ciclista más joven
     for(const auto& c : cyclists_){
-        if(c.GetBirthYear() > max_birth_year){
-            max_birth_year = c.GetBirthYear();
+        if(c.GetBirth_Year() > max_birth_year){
+            max_birth_year = c.GetBirth_Year();
         }
     }
 
     //Recorre de nuevo para encontrar a todos los que tienen esa año
     for(const auto& c : cyclists_){
-        if(c.GetBirthYear() == max_birth_year){
+        if(c.GetBirth_Year() == max_birth_year){
             youngest_cyclists.push_back(c);
         }
     }

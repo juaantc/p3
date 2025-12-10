@@ -26,7 +26,7 @@ int main(){
     std::cin.ignore();
 
     p.SetName(name);
-    p.SetBirthYear(birthyear);
+    p.SetBirth_Year(birthyear);
 //===========================================================
 
 //Apartado para la clase CYCLIST
@@ -74,11 +74,11 @@ int main(){
 //Apartado para mostrar RESULTADOS
     std::cout << "=== RESULTADOS ===" <<std::endl;
 
-    std::cout << "Person -> " << p.GetName() << " (" << p.GetBirthYear() << ") " << std::endl;
+    std::cout << "Person -> " << p.GetName() << " (" << p.GetBirth_Year() << ") " << std::endl;
 
-    std::cout << "Cyclist -> " << c.GetName() << ", " << c.GetBirthYear() << ", " <<  c.GetTeam() << ", " << c.GetCyclistId() << std::endl;
+    std::cout << "Cyclist -> " << c.GetName() << ", " << c.GetBirth_Year() << ", " <<  c.GetTeam() << ", " << c.GetCyclist_Id() << std::endl;
 
-    std::cout << "Director -> " << d.GetName() << ", " << d.GetBirthYear() << ", " <<  d.GetTeam() << ", " << d.GetUciLicenseId() << ", " << ", since " << d.GetDirectorSince() << std::endl;
+    std::cout << "Director -> " << d.GetName() << ", " << d.GetBirth_Year() << ", " <<  d.GetTeam() << ", " << d.GetUci_License_Id() << ", " << ", since " << d.GetDirector_Since() << std::endl;
 //===========================================================
 
 return 0;
