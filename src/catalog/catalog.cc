@@ -35,8 +35,8 @@ bool CyclistCatalog::Load(const std::string& path) {
         birthyear = std::stoi(birth_s);
 
         c.SetName(name);
-        c.SetBirth_Year(birthyear);
-        c.SetCyclist_Id(cyclist_id);
+        c.SetBirthYear(birthyear);
+        c.SetCyclistId(cyclist_id);
         c.SetTeam(team);
 
         cyclists_.push_back(c); // se hace una copia al final del vector
@@ -75,10 +75,10 @@ bool DirectorCatalog::Load(const std::string& path){
         directorsince = std::stoi(director_since_s);
 
         d.SetName(name);
-        d.SetBirth_Year(birthyear);
-        d.SetUci_License_Id(director_id);
+        d.SetBirthYear(birthyear);
+        d.SetUciLicenseId(director_id);
         d.SetTeam(team);
-        d.SetDirector_Since(directorsince);
+        d.SetDirectorSince(directorsince);
         
         directors_.push_back(d); // se hace una copia al final del vector
     
@@ -89,7 +89,7 @@ bool DirectorCatalog::Load(const std::string& path){
 std::string CyclistCatalog::GetTeam(std::string cyclist_id){
 
     for(const auto& c : cyclists_){
-        if (c.GetCyclist_Id() == cyclist_id){
+        if (c.GetCyclistId() == cyclist_id){
             return c.GetTeam();
         }
     }
@@ -122,14 +122,14 @@ std::vector <Cyclist> CyclistCatalog::GetYoungest(){
 
     //El año de nacimiento más alto corresponde al ciclista más joven
     for(const auto& c : cyclists_){
-        if(c.GetBirth_Year() > max_birth_year){
-            max_birth_year = c.GetBirth_Year();
+        if(c.GetBirthYear() > max_birth_year){
+            max_birth_year = c.GetBirthYear();
         }
     }
 
     //Recorre de nuevo para encontrar a todos los que tienen esa año
     for(const auto& c : cyclists_){
-        if(c.GetBirth_Year() == max_birth_year){
+        if(c.GetBirthYear() == max_birth_year){
             youngest_cyclists.push_back(c);
         }
     }
