@@ -1,8 +1,9 @@
 #ifndef CATALOG_H
 #define CATALOG_H
 
-#include "../persons/persons.h"
+#include "persons.h"
 #include <vector>
+#include <string>
 
 
 
